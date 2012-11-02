@@ -46,9 +46,6 @@ namespace Cn.Beginor.MyFirstApp
 			// aapt resource value: 0x7f050001
 			public const int SendButton = 2131034113;
 			
-			// aapt resource value: 0x7f050003
-			public const int ShutDownButton = 2131034115;
-			
 			private Id()
 			{
 			}
