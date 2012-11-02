@@ -19,9 +19,12 @@ namespace Cn.Beginor.MyFirstApp {
 
 		protected override void OnCreate(Bundle bundle) {
 			base.OnCreate(bundle);
+			// // 设置布局文件
 			this.SetContentView(Resource.Layout.SecondActivityLayout);
+			// 从 Intent 中获取 ExtraMessage 
 			var intent = this.Intent;
 			var msg = intent.GetStringExtra(MainActivity.ExtraMessage);
+			// 将 ExtraMessage 显示在 TextView 上
 			var textView = this.FindViewById<TextView>(Resource.Id.MessageTextView);
 			textView.Text = msg;
 		}
