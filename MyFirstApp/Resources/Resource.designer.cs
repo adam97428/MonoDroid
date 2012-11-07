@@ -15,17 +15,6 @@ namespace Cn.Beginor.MyFirstApp
 	public partial class Resource
 	{
 		
-		public partial class Array
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int CountryArray = 2131034112;
-			
-			private Array()
-			{
-			}
-		}
-		
 		public partial class Attribute
 		{
 			
@@ -48,14 +37,14 @@ namespace Cn.Beginor.MyFirstApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int MessageEditText = 2131099648;
+			// aapt resource value: 0x7f050000
+			public const int MessageEditText = 2131034112;
 			
-			// aapt resource value: 0x7f060002
-			public const int MessageTextView = 2131099650;
+			// aapt resource value: 0x7f050002
+			public const int MessageTextView = 2131034114;
 			
-			// aapt resource value: 0x7f060001
-			public const int SendButton = 2131099649;
+			// aapt resource value: 0x7f050001
+			public const int SendButton = 2131034113;
 			
 			private Id()
 			{
@@ -66,13 +55,10 @@ namespace Cn.Beginor.MyFirstApp
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int MainActivityLayout = 2130903040;
+			public const int MainActivity = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int MyListActivityItemLayout = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int SecondActivityLayout = 2130903042;
+			public const int SecondActivity = 2130903041;
 			
 			private Layout()
 			{

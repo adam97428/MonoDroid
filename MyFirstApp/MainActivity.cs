@@ -17,7 +17,7 @@ namespace Cn.Beginor.MyFirstApp {
 		protected override void OnCreate(Bundle bundle) {
 			base.OnCreate(bundle);
 			// 设置布局文件
-			this.SetContentView(Resource.Layout.MainActivityLayout);
+			this.SetContentView(Resource.Layout.MainActivity);
 			var sendBtn = this.FindViewById<Button>(Resource.Id.SendButton);
 			// 为发送按钮添加事件处理函数
 			sendBtn.Click += SendButtonClick;
