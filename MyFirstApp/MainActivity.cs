@@ -21,6 +21,7 @@ namespace Cn.Beginor.MyFirstApp {
 			var sendBtn = this.FindViewById<Button>(Resource.Id.SendButton);
 			// 为发送按钮添加事件处理函数
 			sendBtn.Click += SendButtonClick;
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
 		}
 		
 		void SendButtonClick (object sender, EventArgs e) {
@@ -35,6 +36,36 @@ namespace Cn.Beginor.MyFirstApp {
 			intent.PutExtra(ExtraMessage, msg);
 			// 启动第二个 Activity
 			this.StartActivity(intent);
+		}
+
+		protected override void OnStart() {
+			base.OnStart();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+		}
+
+		protected override void OnResume() {
+			base.OnResume();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+		}
+
+		protected override void OnPause() {
+			base.OnPause();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+		}
+
+		protected override void OnStop() {
+			base.OnStop();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+		}
+
+		protected override void OnRestart() {
+			base.OnRestart();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+		}
+
+		protected override void OnDestroy() {
+			base.OnDestroy();
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
 		}
 	}
 }
