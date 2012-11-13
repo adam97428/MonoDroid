@@ -1,9 +1,4 @@
-using System;
-
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 
@@ -16,8 +11,8 @@ namespace MyListApp {
 			base.OnCreate(bundle);
 
 			// Create your application here
-			var countries = Resources.GetStringArray(Resource.Array.CountryArray);
-			this.ListAdapter = new ArrayAdapter<string>(this, Resource.Layout.MyListActivityItem, countries);
+			var arrayAdapter = new MyListAdapter(this);
+			this.ListAdapter = arrayAdapter;
 			this.ListView.TextFilterEnabled = true;
 			
 			this.ListView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
