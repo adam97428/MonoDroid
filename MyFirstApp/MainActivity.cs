@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Reflection;
 
 namespace Cn.Beginor.MyFirstApp {
 
@@ -21,7 +22,7 @@ namespace Cn.Beginor.MyFirstApp {
 			var sendBtn = this.FindViewById<Button>(Resource.Id.SendButton);
 			// 为发送按钮添加事件处理函数
 			sendBtn.Click += SendButtonClick;
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 		
 		void SendButtonClick (object sender, EventArgs e) {
@@ -40,32 +41,33 @@ namespace Cn.Beginor.MyFirstApp {
 
 		protected override void OnStart() {
 			base.OnStart();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 
 		protected override void OnResume() {
 			base.OnResume();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 
 		protected override void OnPause() {
 			base.OnPause();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 
 		protected override void OnStop() {
 			base.OnStop();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 
 		protected override void OnRestart() {
 			base.OnRestart();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
 		}
 
 		protected override void OnDestroy() {
 			base.OnDestroy();
-			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + System.Reflection.MethodBase.GetCurrentMethod().ToString());
+			Android.Util.Log.Debug("Debug", this.GetType().Name + "." + MethodBase.GetCurrentMethod().Name);
+			Android.Util.Log.Debug("Debug", this.GetType().Name + ".IsFinishing = " + this.IsFinishing);
 		}
 	}
 }
