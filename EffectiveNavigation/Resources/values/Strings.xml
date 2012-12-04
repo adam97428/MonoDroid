@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="AppName">Effective Navigation</string>
+	<string name="DummySectionText">Section %1d is just a dummy section.</string>
+	<string name="DemoExternalActivity">Demo External Activity</string>
+	<string name="DemoCollection">Demo Collection</string>
 </resources>

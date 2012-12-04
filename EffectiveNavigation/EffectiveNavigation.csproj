@@ -51,6 +51,8 @@
     <Compile Include="App.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="AppSectionsPagerAdapter.cs" />
+    <Compile Include="LaunchpadSectionFragment.cs" />
+    <Compile Include="DummySectionFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -64,6 +66,10 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\layout\MainActivity.axml" />
+    <AndroidResource Include="Resources\layout\FragmentSectionDummy.axml" />
+    <AndroidResource Include="Resources\layout\FragmentSectionLaunchpad.axml" />
+    <AndroidResource Include="Resources\layout\CollectionDemoActivity.axml" />
+    <AndroidResource Include="Resources\layout\FragmentCollectionObject.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
