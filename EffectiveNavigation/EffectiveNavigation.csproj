@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="AppSectionsPagerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -67,5 +68,11 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="SupportLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidJavaLibrary Include="..\..\..\android-sdk\extras\android\support\v4\android-support-v4.jar">
+      <Link>SupportLib\android-support-v4.jar</Link>
+    </AndroidJavaLibrary>
   </ItemGroup>
 </Project>
