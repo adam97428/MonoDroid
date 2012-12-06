@@ -53,6 +53,9 @@
     <Compile Include="AppSectionsPagerAdapter.cs" />
     <Compile Include="LaunchpadSectionFragment.cs" />
     <Compile Include="DummySectionFragment.cs" />
+    <Compile Include="CollectionDemoActivity.cs" />
+    <Compile Include="DemoObjectFragment.cs" />
+    <Compile Include="DemoCollectionPagerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

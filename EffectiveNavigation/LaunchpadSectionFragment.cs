@@ -17,7 +17,8 @@ namespace EffectiveNavigation {
 			var demoCollectionBtn = rootView.FindViewById<Button>(Resource.Id.DemoCollectionButton);
 			// Demonstration of a collection-browsing activity.
 			demoCollectionBtn.Click += delegate {
-				System.Console.WriteLine("Start demo collection button");
+				var intent = new Intent(this.Activity, typeof(CollectionDemoActivity));
+				this.StartActivity(intent);
 			};
 
 			var externalActivityBtn = rootView.FindViewById<Button>(Resource.Id.DemoExternalActivityButton);
