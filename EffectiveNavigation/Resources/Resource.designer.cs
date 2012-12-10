@@ -72,6 +72,9 @@ namespace EffectiveNavigation
 			// aapt resource value: 0x7f030004
 			public const int MainActivity = 2130903044;
 			
+			// aapt resource value: 0x7f030005
+			public const int MainActivityActionbarListItem = 2130903045;
+			
 			private Layout()
 			{
 			}

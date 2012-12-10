@@ -2,11 +2,12 @@ using Android.App;
 using Android.OS;
 using Android.Support.V4.App;
 using Android.Support.V4.View;
+using Android.Widget;
 
 namespace EffectiveNavigation {
 
-	[Activity (Label = "@string/AppName", Icon = "@drawable/ic_launcher", MainLauncher = true)]
-	public class MainActivity : FragmentActivity {
+	[Activity (Label = "", Icon = "@drawable/ic_launcher", MainLauncher = true)]
+	public class MainActivity : FragmentActivity, ActionBar.IOnNavigationListener {
 
 		/// <summary>
 		/// The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
@@ -35,8 +36,23 @@ namespace EffectiveNavigation {
 			// Specify that the Home/Up button should not be enabled, since there is no hierarchical
 			// parent.
 			actionBar.SetHomeButtonEnabled(false);
-			// Specify that we will be displaying tabs in the action bar.
-			actionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+			// Specify that we will be displaying list in the action bar.
+			actionBar.NavigationMode = ActionBarNavigationMode.List;
+
+			var titles = new string[this._appSectionsPagerAdapter.Count];
+			for (var i = 0; i < titles.Length; i++) {
+				titles[i] = this._appSectionsPagerAdapter.GetPageTitle(i);
+			}
+
+			actionBar.SetListNavigationCallbacks(
+				new ArrayAdapter(
+					actionBar.ThemedContext,
+					Resource.Layout.MainActivityActionbarListItem,
+					Android.Resource.Id.Text1,
+					titles
+				),
+				this
+			);
 			// Set up the ViewPager, attaching the adapter and setting up a listener for when the
 			// user swipes between sections.
 			this._viewPager = this.FindViewById<ViewPager>(Resource.Id.Pager);
@@ -47,16 +63,13 @@ namespace EffectiveNavigation {
 			this._viewPager.PageSelected += delegate(object sender, ViewPager.PageSelectedEventArgs e) {
 				actionBar.SetSelectedNavigationItem(e.P0);
 			};
-
-			// For each of the sections in the app, add a tab to the action bar.
-			for (var i = 0; i < this._appSectionsPagerAdapter.Count; i++) {
-				var tab = actionBar.NewTab().SetText(this._appSectionsPagerAdapter.GetPageTitle(i));
-				tab.TabSelected += delegate(object sender, Android.App.ActionBar.TabEventArgs e) {
-					this._viewPager.CurrentItem = tab.Position;
-				};
-				actionBar.AddTab(tab);
-			}
 		}
+
+		public bool OnNavigationItemSelected(int itemPosition, long itemId) {
+			this._viewPager.CurrentItem = itemPosition;
+			return true;
+		}
+
 	}
 }
 

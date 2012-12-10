@@ -73,6 +73,7 @@
     <AndroidResource Include="Resources\layout\FragmentSectionLaunchpad.axml" />
     <AndroidResource Include="Resources\layout\CollectionDemoActivity.axml" />
     <AndroidResource Include="Resources\layout\FragmentCollectionObject.axml" />
+    <AndroidResource Include="Resources\layout\MainActivityActionbarListItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
