@@ -3,5 +3,6 @@
 	<string name="AppName">Effective Navigation</string>
 	<string name="DummySectionText">Section %1d is just a dummy section.</string>
 	<string name="DemoExternalActivity">Demo External Activity</string>
-	<string name="DemoCollection">Demo Collection</string>
+	<string name="DemoCollection">Demo Collection Navigation</string>
+	<string name="DemoListNavActivity">Demo List Navigation</string>
 </resources>
