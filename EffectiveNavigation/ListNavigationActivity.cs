@@ -7,7 +7,7 @@ using Android.Content;
 
 namespace EffectiveNavigation {
 
-	[Activity (Label = "", Icon = "@drawable/ic_launcher", MainLauncher = true)]
+	[Activity (Label = "")]
 	public class ListNavigationActivity : FragmentActivity, ActionBar.IOnNavigationListener {
 
 		/// <summary>
