@@ -33,6 +33,6 @@ Global
 		{78B01195-47F5-4225-8ED3-8B3040320791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MyListApp\MyListApp.csproj
+		StartupItem = EffectiveNavigation\EffectiveNavigation.csproj
 	EndGlobalSection
 EndGlobal
