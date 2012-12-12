@@ -21,6 +21,12 @@ namespace EffectiveNavigation {
 				this.StartActivity(intent);
 			};
 
+			var demoListNavBtn = rootView.FindViewById<Button>(Resource.Id.DemoListNavButton);
+			demoListNavBtn.Click += delegate {
+				var intent = new Intent(this.Activity, typeof(ListNavigationActivity));
+				this.StartActivity(intent);
+			};
+
 			var externalActivityBtn = rootView.FindViewById<Button>(Resource.Id.DemoExternalActivityButton);
 			// Demonstration of navigating to external activities.
 			externalActivityBtn.Click += delegate {

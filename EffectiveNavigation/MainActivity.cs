@@ -4,10 +4,10 @@ using Android.Support.V4.App;
 using Android.Support.V4.View;
 
 namespace EffectiveNavigation {
-
+	
 	[Activity (Label = "@string/AppName", Icon = "@drawable/ic_launcher", MainLauncher = true)]
 	public class MainActivity : FragmentActivity {
-
+		
 		/// <summary>
 		/// The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
 		/// three primary sections of the app. We use a {@link android.support.v4.app.FragmentPagerAdapter}
@@ -15,18 +15,18 @@ namespace EffectiveNavigation {
 		/// intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
 		/// </summary>
 		AppSectionsPagerAdapter _appSectionsPagerAdapter;
-
+		
 		/// <summary>
 		/// The {@link ViewPager} that will display the three primary sections of the app, one at a
 		/// time.
 		/// </summary>
 		ViewPager _viewPager;
-
+		
 		protected override void OnCreate(Bundle bundle) {
 			base.OnCreate(bundle);
-
+			
 			this.SetContentView(Resource.Layout.MainActivity);
-
+			
 			// Create the adapter that will return a fragment for each of the three primary sections
 			// of the app.
 			this._appSectionsPagerAdapter = new AppSectionsPagerAdapter(this.SupportFragmentManager);
@@ -47,7 +47,7 @@ namespace EffectiveNavigation {
 			this._viewPager.PageSelected += delegate(object sender, ViewPager.PageSelectedEventArgs e) {
 				actionBar.SetSelectedNavigationItem(e.P0);
 			};
-
+			
 			// For each of the sections in the app, add a tab to the action bar.
 			for (var i = 0; i < this._appSectionsPagerAdapter.Count; i++) {
 				var tab = actionBar.NewTab().SetText(this._appSectionsPagerAdapter.GetPageTitle(i));

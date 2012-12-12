@@ -56,6 +56,7 @@
     <Compile Include="CollectionDemoActivity.cs" />
     <Compile Include="DemoObjectFragment.cs" />
     <Compile Include="DemoCollectionPagerAdapter.cs" />
+    <Compile Include="ListNavigationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -73,6 +74,7 @@
     <AndroidResource Include="Resources\layout\FragmentSectionLaunchpad.axml" />
     <AndroidResource Include="Resources\layout\CollectionDemoActivity.axml" />
     <AndroidResource Include="Resources\layout\FragmentCollectionObject.axml" />
+    <AndroidResource Include="Resources\layout\MainActivityActionbarListItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -48,8 +48,11 @@ namespace EffectiveNavigation
 			// aapt resource value: 0x7f050002
 			public const int DemoCollectionButton = 2131034114;
 			
+			// aapt resource value: 0x7f050004
+			public const int DemoExternalActivityButton = 2131034116;
+			
 			// aapt resource value: 0x7f050003
-			public const int DemoExternalActivityButton = 2131034115;
+			public const int DemoListNavButton = 2131034115;
 			
 			// aapt resource value: 0x7f050000
 			public const int Pager = 2131034112;
@@ -80,6 +83,9 @@ namespace EffectiveNavigation
 			// aapt resource value: 0x7f030004
 			public const int MainActivity = 2130903044;
 			
+			// aapt resource value: 0x7f030005
+			public const int MainActivityActionbarListItem = 2130903045;
+			
 			private Layout()
 			{
 			}
@@ -96,6 +102,9 @@ namespace EffectiveNavigation
 			
 			// aapt resource value: 0x7f040002
 			public const int DemoExternalActivity = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int DemoListNavActivity = 2130968580;
 			
 			// aapt resource value: 0x7f040001
 			public const int DummySectionText = 2130968577;
