@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <AndroidSupportedAbis>armeabi,armeabi-v7a</AndroidSupportedAbis>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,6 +58,7 @@
     <Compile Include="DemoObjectFragment.cs" />
     <Compile Include="DemoCollectionPagerAdapter.cs" />
     <Compile Include="ListNavigationActivity.cs" />
+    <Compile Include="ListNavSectionsPagerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -74,7 +76,7 @@
     <AndroidResource Include="Resources\layout\FragmentSectionLaunchpad.axml" />
     <AndroidResource Include="Resources\layout\CollectionDemoActivity.axml" />
     <AndroidResource Include="Resources\layout\FragmentCollectionObject.axml" />
-    <AndroidResource Include="Resources\layout\MainActivityActionbarListItem.axml" />
+    <AndroidResource Include="Resources\layout\ListNavigationActivityActionbarListItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

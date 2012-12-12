@@ -16,7 +16,7 @@ namespace EffectiveNavigation {
 		/// derivative, which will keep every loaded fragment in memory. If this becomes too memory
 		/// intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
 		/// </summary>
-		AppSectionsPagerAdapter _appSectionsPagerAdapter;
+		ListNavSectionsPagerAdapter _navSectionsPagerAdapter;
 		
 		/// <summary>
 		/// The {@link ViewPager} that will display the three primary sections of the app, one at a
@@ -31,7 +31,7 @@ namespace EffectiveNavigation {
 			
 			// Create the adapter that will return a fragment for each of the three primary sections
 			// of the app.
-			this._appSectionsPagerAdapter = new AppSectionsPagerAdapter(this.SupportFragmentManager);
+			this._navSectionsPagerAdapter = new ListNavSectionsPagerAdapter(this.SupportFragmentManager);
 			// Set up the action bar.
 			var actionBar = this.ActionBar;
 			// Specify that the Home button should show an "Up" caret, indicating that touching the
@@ -40,24 +40,24 @@ namespace EffectiveNavigation {
 			// Specify that we will be displaying list in the action bar.
 			actionBar.NavigationMode = ActionBarNavigationMode.List;
 			
-			var titles = new string[this._appSectionsPagerAdapter.Count];
+			var titles = new string[this._navSectionsPagerAdapter.Count];
 			for (var i = 0; i < titles.Length; i++) {
-				titles[i] = this._appSectionsPagerAdapter.GetPageTitle(i);
+				titles[i] = this._navSectionsPagerAdapter.GetPageTitle(i);
 			}
 			
 			actionBar.SetListNavigationCallbacks(
 				new ArrayAdapter(
-				actionBar.ThemedContext,
-				Resource.Layout.MainActivityActionbarListItem,
-				Android.Resource.Id.Text1,
-				titles
+					actionBar.ThemedContext,
+					Resource.Layout.ListNavigationActivityActionbarListItem,
+					Android.Resource.Id.Text1,
+					titles
 				),
 				this
-				);
+			);
 			// Set up the ViewPager, attaching the adapter and setting up a listener for when the
 			// user swipes between sections.
 			this._viewPager = this.FindViewById<ViewPager>(Resource.Id.Pager);
-			this._viewPager.Adapter = this._appSectionsPagerAdapter;
+			this._viewPager.Adapter = this._navSectionsPagerAdapter;
 			// When swiping between different app sections, select the corresponding tab.
 			// We can also use ActionBar.Tab#select() to do this if we have a reference to the
 			// Tab.
@@ -81,7 +81,7 @@ namespace EffectiveNavigation {
 					// This activity is not part of the application's task, so create a new task
 					// with a synthesized back stack.
 					TaskStackBuilder.Create(this)
-						// If there are ancestor activities, they should be added here.
+					// If there are ancestor activities, they should be added here.
 						.AddNextIntent(upIntent)
 							.StartActivities();
 					this.Finish();
