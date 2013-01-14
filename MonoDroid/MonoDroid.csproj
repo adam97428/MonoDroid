@@ -59,6 +59,7 @@
     <Compile Include="Attributes\Sample.cs" />
     <Compile Include="Attributes\SampleAdapter.cs" />
     <Compile Include="Activities\PopupMenuActivity.cs" />
+    <Compile Include="Fragments\MenuFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -72,6 +73,8 @@
     <AndroidResource Include="Resources\layout\activity_popup_menu.axml" />
     <AndroidResource Include="Resources\layout\activity_actionbarmenu.axml" />
     <AndroidResource Include="Resources\menu\activity_popup_menu_popup.axml" />
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\layout\fragment_menu.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -79,6 +82,7 @@
     <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="SupportLib\" />
+    <Folder Include="Fragments\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidJavaLibrary Include="SupportLib\android-support-v4.jar" />

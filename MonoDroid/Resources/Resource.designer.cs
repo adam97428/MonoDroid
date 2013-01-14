@@ -48,14 +48,23 @@ namespace MonoDroid
 			// aapt resource value: 0x7f060000
 			public const int activity_actionbarmenu_textview = 2131099648;
 			
-			// aapt resource value: 0x7f060001
-			public const int activity_main_list_item_imageview = 2131099649;
-			
 			// aapt resource value: 0x7f060002
-			public const int activity_main_list_item_textview = 2131099650;
+			public const int activity_main_content_frame_layout = 2131099650;
 			
 			// aapt resource value: 0x7f060003
-			public const int activity_popup_menu_button = 2131099651;
+			public const int activity_main_list_item_imageview = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int activity_main_list_item_textview = 2131099652;
+			
+			// aapt resource value: 0x7f060001
+			public const int activity_main_menu_frame_layout = 2131099649;
+			
+			// aapt resource value: 0x7f060005
+			public const int activity_popup_menu_button = 2131099653;
+			
+			// aapt resource value: 0x7f060006
+			public const int fragment_ment_listview = 2131099654;
 			
 			private Id()
 			{
@@ -69,10 +78,16 @@ namespace MonoDroid
 			public const int activity_actionbarmenu = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int activity_main_list_item = 2130903041;
+			public const int activity_main = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int activity_popup_menu = 2130903042;
+			public const int activity_main_list_item = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int activity_popup_menu = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int fragment_menu = 2130903044;
 			
 			private Layout()
 			{
