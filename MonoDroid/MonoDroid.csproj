@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Support.v4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -77,5 +78,9 @@
     <Folder Include="Attributes\" />
     <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="SupportLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidJavaLibrary Include="SupportLib\android-support-v4.jar" />
   </ItemGroup>
 </Project>
