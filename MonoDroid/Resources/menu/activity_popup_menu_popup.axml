@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:title="New" android:icon="@android:drawable/ic_menu_add" />
-	<item android:title="Open" android:icon="@android:drawable/ic_menu_edit" />
-	<item android:title="Save" android:icon="@android:drawable/ic_menu_save" />
-	<item android:title="Help" android:icon="@android:drawable/ic_menu_help" />
-</menu>

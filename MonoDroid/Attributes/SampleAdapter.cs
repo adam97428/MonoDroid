@@ -21,7 +21,7 @@ namespace MonoDroid.Attributes {
 		void FindAppSamples() {
 			var assembly = this._context.GetType().Assembly;
 			var samples = from t in assembly.GetTypes()
-				where typeof(Activity).IsAssignableFrom(t) && t.GetCustomAttributes(typeof(SampleAttribute), false).Length > 0
+				where t.GetCustomAttributes(typeof(SampleAttribute), false).Length > 0
 					select BuildSample(t);
 			this._samples = samples.ToArray();
 		}
@@ -30,7 +30,7 @@ namespace MonoDroid.Attributes {
 			var sample = new Sample();
 			sample.Launch = activityType;
 
-			var attr = (ActivityAttribute)activityType.GetCustomAttributes(typeof(ActivityAttribute), false)[0];
+			var attr = (SampleAttribute)activityType.GetCustomAttributes(typeof(SampleAttribute), false)[0];
 			sample.Label = attr.Label;
 
 			return sample;
@@ -43,16 +43,16 @@ namespace MonoDroid.Attributes {
 		public override View GetView(int position, View convertView, ViewGroup parent) {
 			var itemView = convertView as LinearLayout;
 			if (itemView == null) {
-				itemView = (LinearLayout)this._context.LayoutInflater.Inflate(Resource.Layout.activity_main_list_item, parent, false);
+				itemView = (LinearLayout)this._context.LayoutInflater.Inflate(Resource.Layout.fragment_menu_list_item, parent, false);
 			}
 			var sample = this[position];
 
-			var imageView = itemView.FindViewById<ImageView>(Resource.Id.activity_main_list_item_imageview);
+			//var imageView = itemView.FindViewById<ImageView>(Resource.Id.activity_main_list_item_imageview);
 
-			var cxt = this._context;
-			var pm = cxt.PackageManager;
-			var actIcon = pm.GetActivityIcon(new Intent(cxt, sample.Launch));
-			imageView.SetImageDrawable(actIcon);
+			//var cxt = this._context;
+			//var pm = cxt.PackageManager;
+			//var actIcon = pm.GetActivityIcon(new Intent(cxt, sample.Launch));
+			//imageView.SetImageDrawable(actIcon);
 
 			var textView = itemView.FindViewById<TextView>(Resource.Id.activity_main_list_item_textview);
 			textView.Text = sample.Label;

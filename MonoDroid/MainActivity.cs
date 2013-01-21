@@ -25,19 +25,34 @@ namespace MonoDroid {
 			var fm = this.SupportFragmentManager;
 			var trans = fm.BeginTransaction();
 			trans.Replace(Resource.Id.activity_main_menu_frame_layout, this._menuFrag, "Test");
-			trans.AddToBackStack("Test");
+			//trans.AddToBackStack("Test");
 			trans.Commit();
 		}
 
 		public void OnItemClick(AdapterView parent, View view, int position, long id) {
 			var sample = view.Tag as Sample;
 			if (sample != null) {
-				var intent = new Intent(this, sample.Launch);
-				this.StartActivity(intent);
+				var fragmentType = typeof(Android.Support.V4.App.Fragment);
+				if (fragmentType.IsAssignableFrom(sample.Launch)) {
+					var frag = Activator.CreateInstance(sample.Launch) as Android.Support.V4.App.Fragment;
+					this.PushFragment(frag);
+				}
+				else {
+					var intent = new Intent(this, sample.Launch);
+					this.StartActivity(intent);
+				}
 			}
 			else {
 				Toast.MakeText(this, "Error: Sample is empty!", ToastLength.Short);
 			}
+		}
+
+		public void PushFragment(Android.Support.V4.App.Fragment frag) {
+			var fm = this.SupportFragmentManager;
+			var trans = fm.BeginTransaction();
+			trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
+			trans.AddToBackStack(null);
+			trans.Commit();
 		}
 
 	}

@@ -1,25 +1,18 @@
-using Android.OS;
-using Android.Views;
 using Android.Widget;
 using MonoDroid.Attributes;
 
 namespace MonoDroid.Fragments {
 
-	public class MenuFragment : Android.Support.V4.App.Fragment {
+	public class MenuFragment : Android.Support.V4.App.ListFragment {
 
-		public override View OnCreateView(LayoutInflater p0, ViewGroup p1, Bundle p2) {
-			var view = p0.Inflate(Resource.Layout.fragment_menu, p1, false);
-
-			var listView = view.FindViewById<ListView>(Resource.Id.fragment_ment_listview);
-			listView.Adapter = new SampleAdapter(this.Activity);
+		public override void OnStart() {
+			base.OnStart();
 			var activity = this.Activity;
-
+			this.ListAdapter = new SampleAdapter(activity);
 			var listener = activity as ListView.IOnItemClickListener;
 			if (listener != null) {
-				listView.OnItemClickListener = listener;
+				this.ListView.OnItemClickListener = listener;
 			}
-
-			return view;
 		}
 	}
 }

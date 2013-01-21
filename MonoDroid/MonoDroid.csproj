@@ -55,11 +55,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="AndroidApp.cs" />
     <Compile Include="Attributes\SampleAttribute.cs" />
-    <Compile Include="Activities\ActionBarMenuActivity.cs" />
     <Compile Include="Attributes\Sample.cs" />
     <Compile Include="Attributes\SampleAdapter.cs" />
-    <Compile Include="Activities\PopupMenuActivity.cs" />
     <Compile Include="Fragments\MenuFragment.cs" />
+    <Compile Include="Activities\ActionBarMenuFragment.cs" />
+    <Compile Include="Activities\PopupMenuFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,13 +68,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\layout\activity_main_list_item.axml" />
     <AndroidResource Include="Resources\menu\activity_actionbarmenu_menu.axml" />
-    <AndroidResource Include="Resources\layout\activity_popup_menu.axml" />
     <AndroidResource Include="Resources\layout\activity_actionbarmenu.axml" />
-    <AndroidResource Include="Resources\menu\activity_popup_menu_popup.axml" />
     <AndroidResource Include="Resources\layout\activity_main.axml" />
-    <AndroidResource Include="Resources\layout\fragment_menu.axml" />
+    <AndroidResource Include="Resources\layout\fragment_popup_menu.axml" />
+    <AndroidResource Include="Resources\menu\fragment_popup_menu_popup.axml" />
+    <AndroidResource Include="Resources\layout\fragment_menu_list_item.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
