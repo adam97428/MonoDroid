@@ -61,6 +61,7 @@
     <Compile Include="Samples\ActionBarMenuFragment.cs" />
     <Compile Include="Samples\PopupMenuFragment.cs" />
     <Compile Include="Samples\NavigationFragment.cs" />
+    <Compile Include="Samples\CollectionDemoFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -77,6 +78,8 @@
     <AndroidResource Include="Resources\layout\fragment_actionbarmenu.axml" />
     <AndroidResource Include="Resources\layout\fragment_navigation.axml" />
     <AndroidResource Include="Resources\layout\fragment_navigation_target.axml" />
+    <AndroidResource Include="Resources\layout\fragment_collection_demo.axml" />
+    <AndroidResource Include="Resources\layout\fragment_collection_object.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
