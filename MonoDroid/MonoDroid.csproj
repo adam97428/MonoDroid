@@ -60,6 +60,7 @@
     <Compile Include="Fragments\MenuFragment.cs" />
     <Compile Include="Samples\ActionBarMenuFragment.cs" />
     <Compile Include="Samples\PopupMenuFragment.cs" />
+    <Compile Include="Samples\NavigationFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,12 +69,14 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
-    <AndroidResource Include="Resources\menu\activity_actionbarmenu_menu.axml" />
-    <AndroidResource Include="Resources\layout\activity_actionbarmenu.axml" />
     <AndroidResource Include="Resources\layout\activity_main.axml" />
     <AndroidResource Include="Resources\layout\fragment_popup_menu.axml" />
     <AndroidResource Include="Resources\menu\fragment_popup_menu_popup.axml" />
     <AndroidResource Include="Resources\layout\fragment_menu_list_item.axml" />
+    <AndroidResource Include="Resources\menu\fragment_actionbarmenu_menu.axml" />
+    <AndroidResource Include="Resources\layout\fragment_actionbarmenu.axml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_navigation_target.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

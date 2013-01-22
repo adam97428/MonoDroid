@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstApp", "MyFirstApp\MyFirstApp.csproj", "{1443B7A4-28F4-4958-8ED3-FD3FBAB6122A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyListApp", "MyListApp\MyListApp.csproj", "{78B01195-47F5-4225-8ED3-8B3040320791}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffectiveNavigation", "EffectiveNavigation\EffectiveNavigation.csproj", "{5F659C1E-15AA-401B-A201-867FF48A3D5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoDroid", "MonoDroid\MonoDroid.csproj", "{DD847EED-DB0E-4525-9209-B856F494E6C6}"
@@ -15,18 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1443B7A4-28F4-4958-8ED3-FD3FBAB6122A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1443B7A4-28F4-4958-8ED3-FD3FBAB6122A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1443B7A4-28F4-4958-8ED3-FD3FBAB6122A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1443B7A4-28F4-4958-8ED3-FD3FBAB6122A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F659C1E-15AA-401B-A201-867FF48A3D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F659C1E-15AA-401B-A201-867FF48A3D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F659C1E-15AA-401B-A201-867FF48A3D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F659C1E-15AA-401B-A201-867FF48A3D5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78B01195-47F5-4225-8ED3-8B3040320791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78B01195-47F5-4225-8ED3-8B3040320791}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78B01195-47F5-4225-8ED3-8B3040320791}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78B01195-47F5-4225-8ED3-8B3040320791}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD847EED-DB0E-4525-9209-B856F494E6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD847EED-DB0E-4525-9209-B856F494E6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD847EED-DB0E-4525-9209-B856F494E6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU

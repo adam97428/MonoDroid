@@ -15,13 +15,13 @@ namespace MonoDroid.Samples {
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			var view = inflater.Inflate(Resource.Layout.activity_actionbarmenu, container, false);
+			var view = inflater.Inflate(Resource.Layout.fragment_actionbarmenu, container, false);
 			return view;
 		}
 
 		public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater) {
 			base.OnCreateOptionsMenu(menu, inflater);
-			inflater.Inflate(Resource.Menu.activity_actionbarmenu_menu, menu);
+			inflater.Inflate(Resource.Menu.fragment_actionbarmenu_menu, menu);
 		}
 
 		public override bool OnOptionsItemSelected(IMenuItem item) {

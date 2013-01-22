@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ICS Samples</string>
+	
+	<string name="fragment_navigation_edittext_hint">Enter a message.</string>
+	<string name="fragment_navigation_button_text">Send</string>
 </resources>
