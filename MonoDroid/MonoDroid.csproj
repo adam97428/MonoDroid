@@ -58,8 +58,8 @@
     <Compile Include="Attributes\Sample.cs" />
     <Compile Include="Attributes\SampleAdapter.cs" />
     <Compile Include="Fragments\MenuFragment.cs" />
-    <Compile Include="Activities\ActionBarMenuFragment.cs" />
-    <Compile Include="Activities\PopupMenuFragment.cs" />
+    <Compile Include="Samples\ActionBarMenuFragment.cs" />
+    <Compile Include="Samples\PopupMenuFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -78,10 +78,10 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Attributes\" />
-    <Folder Include="Activities\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="SupportLib\" />
     <Folder Include="Fragments\" />
+    <Folder Include="Samples\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidJavaLibrary Include="SupportLib\android-support-v4.jar" />
