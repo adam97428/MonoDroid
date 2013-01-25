@@ -2,6 +2,7 @@ using System;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
@@ -38,7 +39,13 @@ namespace MonoDroid {
 		public void PushFragment(Android.Support.V4.App.Fragment frag) {
 			var fm = this.SupportFragmentManager;
 			var trans = fm.BeginTransaction();
-			trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
+			var contentFrameLayout = this.FindViewById(Resource.Id.activity_main_content_frame_layout);
+			if (contentFrameLayout != null) {
+				trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
+			}
+			else {
+				trans.Replace(Resource.Id.activity_main_menu_frame_layout, frag);
+			}
 			trans.AddToBackStack(null);
 			trans.Commit();
 		}
@@ -48,6 +55,7 @@ namespace MonoDroid {
 			if (fragmentType.IsAssignableFrom(sample.Launch)) {
 				var frag = Activator.CreateInstance(sample.Launch) as Android.Support.V4.App.Fragment;
 				this.PushFragment(frag);
+				this.Title = sample.Label;
 			}
 			else {
 				var intent = new Intent(this, sample.Launch);
@@ -55,6 +63,19 @@ namespace MonoDroid {
 			}
 		}
 
+		protected override void OnResume() {
+			if (this.RequestedOrientation != AndroidApp.CurrentApp.ScreenOrientation) {
+				this.RequestedOrientation = AndroidApp.CurrentApp.ScreenOrientation;
+			}
+			base.OnResume();
+		}
+
+		public ScreenOrientation ScreenOrientation {
+			get {
+				var dm = AndroidApp.CurrentApp.Resources.DisplayMetrics;
+				return ScreenOrientation.Portrait;
+			}
+		}
 	}
 }
 

@@ -1,14 +1,7 @@
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using MonoDroid.Attributes;
@@ -20,17 +13,20 @@ namespace MonoDroid.Samples {
 
 		public const string ExtraMessage = "MonoDroid.Samples.NavigationFragment.ExtraMessage";
 
+		private const string UserInput = "UserInput";
+		private string _userInputText;
+
 		public override void OnCreate(Bundle savedInstanceState) {
 			base.OnCreate(savedInstanceState);
 
 			// Create your fragment here
+			if (savedInstanceState != null) {
+				this._userInputText = savedInstanceState.GetString(UserInput);
+			}
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			var view = inflater.Inflate(Resource.Layout.fragment_navigation, container, false);
-
-			var btn = view.FindViewById<Button>(Resource.Id.fragment_navigation_button);
-			btn.Click += OnButtonClick;
 			return view;
 		}
 
@@ -47,6 +43,33 @@ namespace MonoDroid.Samples {
 			target.Arguments.PutString(ExtraMessage, editText.Text);
 
 			MainActivity.Current.PushFragment(target);
+		}
+
+		public override void OnStart() {
+			base.OnStart();
+			if (this._userInputText != null) {
+				var editText = this.View.FindViewById<EditText>(Resource.Id.fragment_navigation_edittext);
+				editText.Text = this._userInputText;
+			}
+		}
+
+		public override void OnSaveInstanceState(Bundle p0) {
+			var input = this.View.FindViewById<EditText>(Resource.Id.fragment_navigation_edittext);
+			if (!string.IsNullOrEmpty(input.Text)) {
+				p0.PutString(UserInput, input.Text);
+			}
+		}
+
+		public override void OnResume() {
+			base.OnResume();
+			var btn = this.View.FindViewById<Button>(Resource.Id.fragment_navigation_button);
+			btn.Click += OnButtonClick;
+		}
+
+		public override void OnPause() {
+			base.OnPause();
+			var btn = this.View.FindViewById<Button>(Resource.Id.fragment_navigation_button);
+			btn.Click -= OnButtonClick;
 		}
 	}
 

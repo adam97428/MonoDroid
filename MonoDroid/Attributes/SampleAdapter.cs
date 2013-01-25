@@ -41,9 +41,9 @@ namespace MonoDroid.Attributes {
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent) {
-			var itemView = convertView as LinearLayout;
+			var itemView = convertView;
 			if (itemView == null) {
-				itemView = (LinearLayout)this._context.LayoutInflater.Inflate(Resource.Layout.fragment_menu_list_item, parent, false);
+				itemView = this._context.LayoutInflater.Inflate(Resource.Layout.fragment_menu_list_item, parent, false);
 			}
 			var sample = this[position];
 

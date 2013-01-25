@@ -62,6 +62,7 @@
     <Compile Include="Samples\PopupMenuFragment.cs" />
     <Compile Include="Samples\NavigationFragment.cs" />
     <Compile Include="Samples\CollectionDemoFragment.cs" />
+    <Compile Include="Samples\ActionBarTabFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -80,6 +81,7 @@
     <AndroidResource Include="Resources\layout\fragment_navigation_target.axml" />
     <AndroidResource Include="Resources\layout\fragment_collection_demo.axml" />
     <AndroidResource Include="Resources\layout\fragment_collection_object.axml" />
+    <AndroidResource Include="Resources\layout-large\activity_main.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -88,6 +90,7 @@
     <Folder Include="SupportLib\" />
     <Folder Include="Fragments\" />
     <Folder Include="Samples\" />
+    <Folder Include="Resources\layout-large\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidJavaLibrary Include="SupportLib\android-support-v4.jar" />

@@ -10,7 +10,6 @@
         android:layout_height="fill_parent"
         android:id="@+id/activity_main_menu_frame_layout"
         android:layout_weight="1" />
-<!--
     <FrameLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -19,5 +18,4 @@
         android:id="@+id/activity_main_content_frame_layout"
         android:layout_weight="3"
         android:background="#ff333333" />
-    -->
 </LinearLayout>
