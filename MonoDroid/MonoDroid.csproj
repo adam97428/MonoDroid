@@ -89,6 +89,7 @@
     <AndroidResource Include="Resources\layout-large\activity_main.axml" />
     <AndroidResource Include="Resources\layout\fragment_actionbar_tabs.axml" />
     <AndroidResource Include="Resources\layout\fragment_actionbar_tabs_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_pager_tabstrip_tabs.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />

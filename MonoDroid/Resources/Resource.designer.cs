@@ -79,7 +79,13 @@ namespace MonoDroid
 			public const int fragment_navigation_target_textview = 2131099658;
 			
 			// aapt resource value: 0x7f06000b
-			public const int fragment_popup_menu_button = 2131099659;
+			public const int fragment_pager_tabstrip_viewpager = 2131099659;
+			
+			// aapt resource value: 0x7f06000c
+			public const int fragment_pagertabstrip_tabstrip = 2131099660;
+			
+			// aapt resource value: 0x7f06000d
+			public const int fragment_popup_menu_button = 2131099661;
 			
 			private Id()
 			{
@@ -117,7 +123,10 @@ namespace MonoDroid
 			public const int fragment_navigation_target = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int fragment_popup_menu = 2130903049;
+			public const int fragment_pager_tabstrip_tabs = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int fragment_popup_menu = 2130903050;
 			
 			private Layout()
 			{
