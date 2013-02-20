@@ -23,6 +23,8 @@ namespace MonoDroid {
 
 		protected override void OnCreate(Bundle bundle) {
 			base.OnCreate(bundle);
+			//this.Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+			//this.Window.RequestFeature(WindowFeatures.NoTitle);
 
 			Current = this;
 
@@ -39,9 +41,9 @@ namespace MonoDroid {
 		public void PushFragment(Android.Support.V4.App.Fragment frag) {
 			var fm = this.SupportFragmentManager;
 			var trans = fm.BeginTransaction();
-			var contentFrameLayout = this.FindViewById(Resource.Id.activity_main_content_frame_layout);
-			if (contentFrameLayout != null) {
-				trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
+			//var contentFrameLayout = this.FindViewById(Resource.Id.activity_main_content_frame_layout);
+			if (/*contentFrameLayout != null*/ false ) {
+				//trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
 			}
 			else {
 				trans.Replace(Resource.Id.activity_main_menu_frame_layout, frag);
@@ -68,13 +70,6 @@ namespace MonoDroid {
 				this.RequestedOrientation = AndroidApp.CurrentApp.ScreenOrientation;
 			}
 			base.OnResume();
-		}
-
-		public ScreenOrientation ScreenOrientation {
-			get {
-				var dm = AndroidApp.CurrentApp.Resources.DisplayMetrics;
-				return ScreenOrientation.Portrait;
-			}
 		}
 	}
 }

@@ -27,7 +27,7 @@ namespace MonoDroid {
 			}
 		}
 
-		bool IsTablet {
+		public bool IsTablet {
 			get {
 				var dm = this.Resources.DisplayMetrics;
 				var scaledDencity = dm.ScaledDensity;

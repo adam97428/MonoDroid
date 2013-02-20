@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -16,6 +16,8 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>MonoDroid</AssemblyName>
     <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -27,7 +29,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <MandroidI18n>cjk</MandroidI18n>
+    <MandroidI18n>CJK</MandroidI18n>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -63,8 +65,11 @@
     <Compile Include="Samples\NavigationFragment.cs" />
     <Compile Include="Samples\CollectionDemoFragment.cs" />
     <Compile Include="Samples\ActionBarTabFragment.cs" />
+    <Compile Include="Samples\PagerTabStripFragment.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Diagrams\Android.Animation.cd" />
+    <None Include="Diagrams\Android.Views.Animations.cd" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -84,14 +89,7 @@
     <AndroidResource Include="Resources\layout-large\activity_main.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Attributes\" />
-    <Folder Include="Resources\menu\" />
-    <Folder Include="SupportLib\" />
-    <Folder Include="Fragments\" />
-    <Folder Include="Samples\" />
-    <Folder Include="Resources\layout-large\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidJavaLibrary Include="SupportLib\android-support-v4.jar" />
   </ItemGroup>
