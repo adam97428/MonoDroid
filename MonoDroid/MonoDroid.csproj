@@ -66,6 +66,7 @@
     <Compile Include="Samples\CollectionDemoFragment.cs" />
     <Compile Include="Samples\ActionBarTabFragment.cs" />
     <Compile Include="Samples\PagerTabStripFragment.cs" />
+    <Compile Include="Samples\AnimationsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\Android.Animation.cd" />
@@ -90,6 +91,12 @@
     <AndroidResource Include="Resources\layout\fragment_actionbar_tabs.axml" />
     <AndroidResource Include="Resources\layout\fragment_actionbar_tabs_item.axml" />
     <AndroidResource Include="Resources\layout\fragment_pager_tabstrip_tabs.axml" />
+    <AndroidResource Include="Resources\layout\fragment_animations.axml" />
+    <AndroidResource Include="Resources\layout\fragment_animations_view_animation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_animations_property_animation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_animations_layout_animation.axml" />
+    <AndroidResource Include="Resources\drawable\image1.jpg" />
+    <AndroidResource Include="Resources\drawable\image2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />
