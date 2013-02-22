@@ -16,6 +16,9 @@ namespace MonoDroid {
 
 		private MenuFragment _menuFrag;
 
+		private int _menuFrameLayoutId;
+		private int _contentFrameLayoutId;
+
 		public static MainActivity Current {
 			get;
 			private set;
@@ -28,25 +31,52 @@ namespace MonoDroid {
 
 			Current = this;
 
-			this.SetContentView(Resource.Layout.activity_main);
+			this.SetContentView();
 
 			this._menuFrag = new MenuFragment();
 			var fm = this.SupportFragmentManager;
 			var trans = fm.BeginTransaction();
-			trans.Replace(Resource.Id.activity_main_menu_frame_layout, this._menuFrag, "Test");
+			trans.Replace(this._menuFrameLayoutId, this._menuFrag, "Test");
 			//trans.AddToBackStack("Test");
 			trans.Commit();
+		}
+
+		private void SetContentView() {
+			var matchParent = ViewGroup.LayoutParams.MatchParent;
+			var rootLinearLayout = new LinearLayout(this) {
+				LayoutParameters = new ViewGroup.LayoutParams(matchParent, matchParent),
+				Orientation = Orientation.Horizontal
+			};
+			// add menu fragment
+			var menuFrameLayout = new FrameLayout(this) {
+				Id = AndroidApp.CurrentApp.GenerateViewId(),
+				LayoutParameters = new LinearLayout.LayoutParams(0, matchParent, 1f)
+			};
+			rootLinearLayout.AddView(menuFrameLayout);
+			this._menuFrameLayoutId = menuFrameLayout.Id;
+			// if is large screen, add content frame layout
+			if (AndroidApp.CurrentApp.IsLargeScreen()) {
+				var contentFrameLayout = new FrameLayout(this) {
+					Id = AndroidApp.CurrentApp.GenerateViewId(),
+					LayoutParameters = new LinearLayout.LayoutParams(0, matchParent, 3f)
+				};
+				contentFrameLayout.SetBackgroundColor(new Android.Graphics.Color(0x33, 0x33, 0x33, 0xff));
+				rootLinearLayout.AddView(contentFrameLayout);
+				this._contentFrameLayoutId = contentFrameLayout.Id;
+			}
+
+			this.SetContentView(rootLinearLayout);
 		}
 
 		public void PushFragment(Android.Support.V4.App.Fragment frag) {
 			var fm = this.SupportFragmentManager;
 			var trans = fm.BeginTransaction();
-			var contentFrameLayout = this.FindViewById(Resource.Id.activity_main_content_frame_layout);
+			var contentFrameLayout = this.FindViewById(this._contentFrameLayoutId);
 			if (contentFrameLayout != null ) {
-				trans.Replace(Resource.Id.activity_main_content_frame_layout, frag);
+				trans.Replace(this._contentFrameLayoutId, frag);
 			}
 			else {
-				trans.Replace(Resource.Id.activity_main_menu_frame_layout, frag);
+				trans.Replace(this._menuFrameLayoutId, frag);
 			}
 			trans.AddToBackStack(null);
 			trans.Commit();

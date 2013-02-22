@@ -173,12 +173,21 @@ namespace MonoDroid.Samples {
 
 	public class PropertyAnimationFragment : Android.Support.V4.App.Fragment {
 
+		public override void OnCreate(Bundle savedInstanceState) {
+			base.OnCreate(savedInstanceState);
+		}
+
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			return base.OnCreateView(inflater, container, savedInstanceState);
+			var view = inflater.Inflate(Resource.Layout.fragment_animations_property_animation, container, false);
+			return view;
 		}
 	}
 
 	public class LayoutAnimationFragment : Android.Support.V4.App.Fragment {
+
+		public override void OnCreate(Bundle savedInstanceState) {
+			base.OnCreate(savedInstanceState);
+		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			return base.OnCreateView(inflater, container, savedInstanceState);
