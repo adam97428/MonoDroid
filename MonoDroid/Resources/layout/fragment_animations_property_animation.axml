@@ -3,6 +3,20 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_animations_property_animation_seekbar1"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="50" />
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_animations_property_animation_seekbar2"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="50" />
 </LinearLayout>
-

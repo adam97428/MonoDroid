@@ -173,24 +173,71 @@ namespace MonoDroid.Samples {
 
 	public class PropertyAnimationFragment : Android.Support.V4.App.Fragment {
 
+		private SeekBar _seekBar1;
+		private SeekBar _seekBar2;
+
 		public override void OnCreate(Bundle savedInstanceState) {
 			base.OnCreate(savedInstanceState);
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			var view = inflater.Inflate(Resource.Layout.fragment_animations_property_animation, container, false);
+			this._seekBar1 = view.FindViewById<SeekBar>(Resource.Id.fragment_animations_property_animation_seekbar1);
+			this._seekBar1.StopTrackingTouch += OnSeekBarStopTrackingTouch;
+			this._seekBar2 = view.FindViewById<SeekBar>(Resource.Id.fragment_animations_property_animation_seekbar2);
 			return view;
 		}
+
+		void OnSeekBarStopTrackingTouch (object sender, SeekBar.StopTrackingTouchEventArgs e) {
+			var seekBar = (SeekBar)sender;
+			var toValue = seekBar.Progress;
+			var fromValue = this._seekBar2.Progress;
+			
+			var objAnim = ObjectAnimator.OfInt(this._seekBar2, "Progress", fromValue, toValue);
+			objAnim.SetDuration(1000);
+			objAnim.Start();
+		}
+
 	}
 
 	public class LayoutAnimationFragment : Android.Support.V4.App.Fragment {
+
+		private LinearLayout _linearLayout;
+		private TextView _textView;
+		private ImageView _imageView;
+		private Button _button;
 
 		public override void OnCreate(Bundle savedInstanceState) {
 			base.OnCreate(savedInstanceState);
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			return base.OnCreateView(inflater, container, savedInstanceState);
+			var view = inflater.Inflate(Resource.Layout.fragment_animations_layout_animation, container, false);
+			this._linearLayout = view.FindViewById<LinearLayout>(Resource.Id.fragment_animations_layout_animation_linear_layout);
+			this._linearLayout.LayoutTransition = CreateLayoutTransaction();
+			this._textView = view.FindViewById<TextView>(Resource.Id.fragment_animations_layout_animation_textview);
+			this._imageView = view.FindViewById<ImageView>(Resource.Id.fragment_animations_layout_animation_imageview);
+			this._button = view.FindViewById<Button>(Resource.Id.fragment_animations_layout_animation_button);
+			this._button.Click += OnButtonClick;
+			return view;
+		}
+
+		static LayoutTransition CreateLayoutTransaction() {
+			var layoutTransition = new LayoutTransition();
+			//layoutTransition.SetAnimator(LayoutTransitionType.Appearing, new Animator(
+			return layoutTransition;
+		}
+
+		void OnButtonClick (object sender, EventArgs e) {
+			var state = this._textView.Visibility;
+			if (state == ViewStates.Visible) {
+				this._textView.Visibility = ViewStates.Gone;
+				this._imageView.Visibility = ViewStates.Visible;
+			}
+			else {
+				this._textView.Visibility = ViewStates.Visible;
+				this._imageView.Visibility = ViewStates.Gone;
+			}
 		}
 	}
 }

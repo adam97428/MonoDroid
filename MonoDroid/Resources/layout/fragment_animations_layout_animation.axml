@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_animations_layout_animation_linear_layout"
+        android:animateLayoutChanges="true"
+        android:layout_margin="10dp">
+        <TextView
+            android:text="Text Demo"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:id="@+id/fragment_animations_layout_animation_textview"
+            android:layout_gravity="center"
+            android:textSize="36sp"
+            android:typeface="monospace"
+            android:gravity="center" />
+        <ImageView
+            android:src="@drawable/image1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:id="@+id/fragment_animations_layout_animation_imageview"
+            android:visibility="gone" />
+    </LinearLayout>
+    <Button
+        android:text="Switch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_animations_layout_animation_button"
+        android:layout_margin="10dp" />
 </LinearLayout>
-

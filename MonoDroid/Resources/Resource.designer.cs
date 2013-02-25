@@ -54,47 +54,65 @@ namespace MonoDroid
 			// aapt resource value: 0x7f060001
 			public const int activity_actionbarmenu_textview = 2131099649;
 			
-			// aapt resource value: 0x7f060007
-			public const int activity_main_list_item_imageview = 2131099655;
+			// aapt resource value: 0x7f06000d
+			public const int activity_main_list_item_imageview = 2131099661;
 			
-			// aapt resource value: 0x7f060008
-			public const int activity_main_list_item_textview = 2131099656;
+			// aapt resource value: 0x7f06000e
+			public const int activity_main_list_item_textview = 2131099662;
 			
 			// aapt resource value: 0x7f060000
 			public const int fragment_actionbar_tabs_viewpager = 2131099648;
 			
-			// aapt resource value: 0x7f060004
-			public const int fragment_animations_view_animation_button = 2131099652;
+			// aapt resource value: 0x7f060006
+			public const int fragment_animations_layout_animation_button = 2131099654;
+			
+			// aapt resource value: 0x7f060005
+			public const int fragment_animations_layout_animation_imageview = 2131099653;
 			
 			// aapt resource value: 0x7f060003
-			public const int fragment_animations_view_animation_imageView = 2131099651;
+			public const int fragment_animations_layout_animation_linear_layout = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int fragment_animations_layout_animation_textview = 2131099652;
+			
+			// aapt resource value: 0x7f060007
+			public const int fragment_animations_property_animation_seekbar1 = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int fragment_animations_property_animation_seekbar2 = 2131099656;
+			
+			// aapt resource value: 0x7f06000a
+			public const int fragment_animations_view_animation_button = 2131099658;
+			
+			// aapt resource value: 0x7f060009
+			public const int fragment_animations_view_animation_imageView = 2131099657;
 			
 			// aapt resource value: 0x7f060002
 			public const int fragment_animations_viewpager = 2131099650;
 			
-			// aapt resource value: 0x7f060006
-			public const int fragment_collection_demo_pager_itle_strip = 2131099654;
-			
-			// aapt resource value: 0x7f060005
-			public const int fragment_collection_demo_viewpager = 2131099653;
-			
-			// aapt resource value: 0x7f06000a
-			public const int fragment_navigation_button = 2131099658;
-			
-			// aapt resource value: 0x7f060009
-			public const int fragment_navigation_edittext = 2131099657;
+			// aapt resource value: 0x7f06000c
+			public const int fragment_collection_demo_pager_itle_strip = 2131099660;
 			
 			// aapt resource value: 0x7f06000b
-			public const int fragment_navigation_target_textview = 2131099659;
+			public const int fragment_collection_demo_viewpager = 2131099659;
 			
-			// aapt resource value: 0x7f06000c
-			public const int fragment_pager_tabstrip_viewpager = 2131099660;
+			// aapt resource value: 0x7f060010
+			public const int fragment_navigation_button = 2131099664;
 			
-			// aapt resource value: 0x7f06000d
-			public const int fragment_pagertabstrip_tabstrip = 2131099661;
+			// aapt resource value: 0x7f06000f
+			public const int fragment_navigation_edittext = 2131099663;
 			
-			// aapt resource value: 0x7f06000e
-			public const int fragment_popup_menu_button = 2131099662;
+			// aapt resource value: 0x7f060011
+			public const int fragment_navigation_target_textview = 2131099665;
+			
+			// aapt resource value: 0x7f060012
+			public const int fragment_pager_tabstrip_viewpager = 2131099666;
+			
+			// aapt resource value: 0x7f060013
+			public const int fragment_pagertabstrip_tabstrip = 2131099667;
+			
+			// aapt resource value: 0x7f060014
+			public const int fragment_popup_menu_button = 2131099668;
 			
 			private Id()
 			{
