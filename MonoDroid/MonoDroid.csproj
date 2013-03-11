@@ -67,6 +67,7 @@
     <Compile Include="Samples\ActionBarTabFragment.cs" />
     <Compile Include="Samples\PagerTabStripFragment.cs" />
     <Compile Include="Samples\AnimationsFragment.cs" />
+    <Compile Include="Samples\BottomTabbarFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\Android.Animation.cd" />
@@ -75,7 +76,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\fragment_popup_menu.axml" />
     <AndroidResource Include="Resources\menu\fragment_popup_menu_popup.axml" />
@@ -95,6 +95,12 @@
     <AndroidResource Include="Resources\layout\fragment_animations_layout_animation.axml" />
     <AndroidResource Include="Resources\drawable\image1.jpg" />
     <AndroidResource Include="Resources\drawable\image2.jpg" />
+    <AndroidResource Include="Resources\layout\fragment_bottom_tabbar.axml" />
+    <AndroidResource Include="Resources\values\style_bottom_tab_bar.axml" />
+    <AndroidResource Include="Resources\values\Strings.axml" />
+    <AndroidResource Include="Resources\values\colors.axml" />
+    <AndroidResource Include="Resources\values\dimens.axml" />
+    <AndroidResource Include="Resources\drawable\style_bottom_tab_bar_item_background_selector.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup />

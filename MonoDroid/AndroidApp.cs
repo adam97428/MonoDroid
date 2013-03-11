@@ -5,7 +5,7 @@ using Android.Content.PM;
 
 namespace MonoDroid {
 
-	[Application(UiOptions = UiOptions.SplitActionBarWhenNarrow)]
+	[Application(UiOptions = UiOptions.SplitActionBarWhenNarrow, Theme = "@android:style/Theme.Holo")]
 	public class AndroidApp : Application {
 
 		public static AndroidApp CurrentApp {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="bottom_tab_bar">
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:orientation">horizontal</item>
+		<item name="android:background">@drawable/style_bottom_tab_bar_background_color</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">64dp</item>
+	</style>
+	
+	<style name="bottom_tab_bar_item">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:background">@drawable/style_bottom_tab_bar_item_background_selector</item>
+		<!--
+		<item name="android:background">@color/style_bottom_tab_bar_item_checked_background</item>
+		-->
+		<item name="android:button">@null</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:padding">8dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+	</style>
+	
+</resources>

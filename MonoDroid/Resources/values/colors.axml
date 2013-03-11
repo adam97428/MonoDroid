@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+	<drawable name="style_bottom_tab_bar_background_color">#171814</drawable>
+
+	<color name="style_bottom_tab_bar_item_text_color">#FFFFFF</color>
+	<drawable name="style_bottom_tab_bar_item_background">#393937</drawable>
+	<drawable name="style_bottom_tab_bar_item_checked_background">#272822</drawable>
+
+</resources>
